@@ -1,0 +1,76 @@
+{
+  "title": "Panasonic Comfort Cloud Reliable",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Yhdistä Panasonic Comfort Cloud",
+        "description": "Kokeellinen pilvi-integraatio. Seuranta on aluksi käytössä; ilmalämpöpumpun ohjauksen voi ottaa käyttöön asetuksista. Salasanaa ja kertakäyttökoodia ei tallenneta.",
+        "data": {
+          "username": "Panasonic ID (sähköposti)",
+          "password": "Salasana",
+          "app_version": "Comfort Cloudin rajapintaversio"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Uusi Panasonic-kirjautuminen",
+        "description": "Kirjaudu samalla tilillä. Nykyiset entiteetit ja asetukset säilyvät.",
+        "data": {
+          "username": "Panasonic ID (sähköposti)",
+          "password": "Salasana",
+          "app_version": "Comfort Cloudin rajapintaversio"
+        }
+      },
+      "mfa": {
+        "title": "Panasonicin vahvistuskoodi",
+        "description": "Anna Panasonicin kirjautumisen yhteydessä pyytämä kertakäyttökoodi.",
+        "data": {
+          "otp_code": "Vahvistuskoodi"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sign in failed or the session was revoked. Check the account in the official app.",
+      "agreements_required": "Review and accept Panasonic's updated agreements in the official Comfort Cloud app, then retry.",
+      "app_version": "Panasonic rejected the app protocol version. Set the current Comfort Cloud app version in this sign-in form and retry.",
+      "rate_limit": "Panasonic is limiting requests. Wait before trying again.",
+      "cannot_connect": "Cannot reach Panasonic. Check the connection and try later.",
+      "protocol_error": "Panasonic returned an unsupported response. Check the official app and open an issue with redacted diagnostics.",
+      "mfa_retry": "The verification challenge could not be completed. Sign in again to request a fresh challenge.",
+      "stale_too_short": "Maximum age must be at least twice the status interval.",
+      "invalid_version": "Use a version such as 1.21.0."
+    },
+    "abort": {
+      "already_configured": "This Panasonic account is already configured.",
+      "reauth_successful": "Sign-in renewed.",
+      "wrong_account": "Use the same Panasonic account as this integration."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Päivitykset, diagnostiikka ja ohjaus",
+        "description": "Pidempi päivitysväli vähentää pilven kuormaa. Raakamittareille ei oleteta yksikköä. Ohjaus on kokeellinen ja koskee ilmalämpöpumppuja.",
+        "data": {
+          "poll_interval": "Tilan päivitysväli (sekuntia, vähintään 60)",
+          "stale_after": "Tiedon enimmäisikä (sekuntia)",
+          "enable_energy": "Hae ilmalämpöpumpun energiahistoria",
+          "energy_interval": "Energian päivitysväli (sekuntia)",
+          "raw_sensors": "Luo ylimääräiset raakamittarit (aluksi pois käytöstä)",
+          "enable_control": "Ota kokeellinen ilmalämpöpumpun ohjaus käyttöön",
+          "app_version": "Comfort Cloudin rajapintaversio"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sign in failed or the session was revoked. Check the account in the official app.",
+      "agreements_required": "Review and accept Panasonic's updated agreements in the official Comfort Cloud app, then retry.",
+      "app_version": "Panasonic requires a newer app protocol version. Update integration options or report the version error.",
+      "rate_limit": "Panasonic is limiting requests. Wait before trying again.",
+      "cannot_connect": "Cannot reach Panasonic. Check the connection and try later.",
+      "protocol_error": "Panasonic returned an unsupported response. Check the official app and open an issue with redacted diagnostics.",
+      "mfa_retry": "The verification challenge could not be completed. Sign in again to request a fresh challenge.",
+      "stale_too_short": "Maximum age must be at least twice the status interval.",
+      "invalid_version": "Use a version such as 1.21.0."
+    }
+  }
+}

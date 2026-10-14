@@ -1,0 +1,76 @@
+{
+  "title": "Panasonic Comfort Cloud Reliable",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Panasonic Comfort Cloud",
+        "description": "Experimental cloud integration. Monitoring is enabled first; AC controls can be enabled in options. Use an account with access to your own devices. Your password and one-time code are not saved.",
+        "data": {
+          "username": "Panasonic ID (email)",
+          "password": "Password",
+          "app_version": "Comfort Cloud app protocol version"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Renew Panasonic sign-in",
+        "description": "Sign in to the same account. Existing entities and options will be retained.",
+        "data": {
+          "username": "Panasonic ID (email)",
+          "password": "Password",
+          "app_version": "Comfort Cloud app protocol version"
+        }
+      },
+      "mfa": {
+        "title": "Panasonic verification code",
+        "description": "Enter the one-time code requested by Panasonic's current sign-in challenge.",
+        "data": {
+          "otp_code": "Verification code"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sign in failed or the session was revoked. Check the account in the official app.",
+      "agreements_required": "Review and accept Panasonic's updated agreements in the official Comfort Cloud app, then retry.",
+      "app_version": "Panasonic rejected the app protocol version. Set the current Comfort Cloud app version in this sign-in form and retry.",
+      "rate_limit": "Panasonic is limiting requests. Wait before trying again.",
+      "cannot_connect": "Cannot reach Panasonic. Check the connection and try later.",
+      "protocol_error": "Panasonic returned an unsupported response. Check the official app and open an issue with redacted diagnostics.",
+      "mfa_retry": "The verification challenge could not be completed. Sign in again to request a fresh challenge.",
+      "stale_too_short": "Maximum age must be at least twice the status interval.",
+      "invalid_version": "Use a version such as 1.21.0."
+    },
+    "abort": {
+      "already_configured": "This Panasonic account is already configured.",
+      "reauth_successful": "Sign-in renewed.",
+      "wrong_account": "Use the same Panasonic account as this integration."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling, diagnostics and AC controls",
+        "description": "Longer intervals reduce account throttling. Unknown raw sensors have no assumed units. Control support is experimental and AC only.",
+        "data": {
+          "poll_interval": "Status interval (seconds, minimum 60)",
+          "stale_after": "Maximum status age (seconds)",
+          "enable_energy": "Fetch AC energy history",
+          "energy_interval": "Energy history interval (seconds)",
+          "raw_sensors": "Discover extra raw numeric sensors (disabled initially)",
+          "enable_control": "Enable experimental AC controls",
+          "app_version": "Comfort Cloud app protocol version"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sign in failed or the session was revoked. Check the account in the official app.",
+      "agreements_required": "Review and accept Panasonic's updated agreements in the official Comfort Cloud app, then retry.",
+      "app_version": "Panasonic requires a newer app protocol version. Update integration options or report the version error.",
+      "rate_limit": "Panasonic is limiting requests. Wait before trying again.",
+      "cannot_connect": "Cannot reach Panasonic. Check the connection and try later.",
+      "protocol_error": "Panasonic returned an unsupported response. Check the official app and open an issue with redacted diagnostics.",
+      "mfa_retry": "The verification challenge could not be completed. Sign in again to request a fresh challenge.",
+      "stale_too_short": "Maximum age must be at least twice the status interval.",
+      "invalid_version": "Use a version such as 1.21.0."
+    }
+  }
+}
